@@ -1,0 +1,25 @@
+{
+  "type": "farmersdelight:cooking",
+  "container": {
+    "id": "minecraft:bowl"
+  },
+  "experience": 1.0,
+  "ingredients": [
+    "veggiesdelight:bellpepper",
+    "veggiesdelight:bellpepper",
+    "veggiesdelight:bellpepper",
+    "#c:crops/tomato",
+    {
+      "neoforge:ingredient_type": "neoforge:compound",
+      "children": [
+        "#c:foods/raw_beef",
+        "#c:foods/raw_chicken",
+        "#c:foods/raw_mutton"
+      ]
+    }
+  ],
+  "recipe_book_tab": "meals",
+  "result": {
+    "id": "veggiesdelight:stuffed_bellpeppers_block"
+  }
+}

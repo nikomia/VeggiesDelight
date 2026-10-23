@@ -9,15 +9,13 @@
           "name": "veggiesdelight:lasagna_pan"
         }
       ],
-      "conditions": [
-        {
-          "condition": "minecraft:block_state_property",
-          "block": "veggiesdelight:lasagna_pan",
-          "properties": {
-            "servings": "4"
-          }
+      "condition": {
+        "type": "minecraft:match_block",
+        "blocks": "veggiesdelight:lasagna_pan",
+        "state": {
+          "servings": "4"
         }
-      ]
+      }
     },
     {
       "rolls": 1,
@@ -27,18 +25,16 @@
           "name": "minecraft:bowl"
         }
       ],
-      "conditions": [
-        {
-          "condition": "minecraft:inverted",
-          "term": {
-            "condition": "minecraft:block_state_property",
-            "block": "veggiesdelight:lasagna_pan",
-            "properties": {
-              "servings": "4"
-            }
+      "condition": {
+        "type": "minecraft:inverted",
+        "term": {
+          "type": "minecraft:match_block",
+          "blocks": "veggiesdelight:lasagna_pan",
+          "state": {
+            "servings": "4"
           }
         }
-      ]
+      }
     }
   ]
 }

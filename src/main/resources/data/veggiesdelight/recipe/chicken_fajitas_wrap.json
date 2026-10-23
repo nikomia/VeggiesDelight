@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#c:foods/dough",
+    "#c:crops/onion",
+    "#c:foods/cooked_chicken",
+    "veggiesdelight:smoked_bellpepper"
+  ],
+  "result": {
+    "id": "veggiesdelight:chicken_fajitas_wrap"
+  }
+}

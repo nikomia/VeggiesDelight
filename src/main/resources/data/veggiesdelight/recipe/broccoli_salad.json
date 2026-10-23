@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#c:crops/broccoli",
+    "#c:crops/tomato",
+    "#c:crops/onion",
+    "minecraft:bowl"
+  ],
+  "result": {
+    "id": "veggiesdelight:broccoli_salad"
+  }
+}

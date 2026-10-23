@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#c:foods/bread",
+    "#c:crops/cabbage",
+    "veggiesdelight:cooked_vegetarian_patty",
+    "#c:crops/tomato"
+  ],
+  "result": {
+    "id": "veggiesdelight:vegetarian_burger"
+  }
+}

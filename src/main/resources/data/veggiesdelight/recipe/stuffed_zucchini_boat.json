@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "veggiesdelight:roasted_zucchini",
+    {
+      "neoforge:ingredient_type": "neoforge:compound",
+      "children": [
+        "#c:foods/cooked_mutton",
+        "#c:foods/cooked_chicken",
+        "#c:foods/cooked_beef"
+      ]
+    },
+    "#c:drinks/milk"
+  ],
+  "result": {
+    "id": "veggiesdelight:stuffed_zucchini_boat"
+  }
+}

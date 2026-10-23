@@ -1,0 +1,20 @@
+{
+  "type": "farmersdelight:cutting",
+  "ingredients": [
+    "veggiesdelight:wild_turnips"
+  ],
+  "result": [
+    {
+      "item": {
+        "id": "veggiesdelight:turnip_seeds"
+      }
+    },
+    {
+      "chance": 0.5,
+      "item": {
+        "id": "minecraft:magenta_dye"
+      }
+    }
+  ],
+  "tool": "#c:tools/knife"
+}

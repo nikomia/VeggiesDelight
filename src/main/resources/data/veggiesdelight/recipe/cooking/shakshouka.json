@@ -1,0 +1,17 @@
+{
+  "type": "farmersdelight:cooking",
+  "container": {
+    "id": "minecraft:bowl"
+  },
+  "experience": 1.0,
+  "ingredients": [
+    "#c:crops/bellpepper",
+    "#c:crops/onion",
+    "#c:crops/tomato",
+    "#c:eggs"
+  ],
+  "recipe_book_tab": "meals",
+  "result": {
+    "id": "veggiesdelight:shakshouka"
+  }
+}

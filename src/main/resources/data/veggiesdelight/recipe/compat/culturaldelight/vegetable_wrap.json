@@ -8,37 +8,26 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
+    "culturaldelights:tortilla",
+    "#c:crops/onion",
     {
-      "item": "culturaldelights:tortilla"
+      "neoforge:ingredient_type": "neoforge:compound",
+      "children": [
+        "#c:crops/broccoli",
+        "#c:foods/leafy_green"
+      ]
     },
     {
-      "tag": "c:crops/onion"
+      "neoforge:ingredient_type": "neoforge:compound",
+      "children": [
+        "veggiesdelight:smoked_bellpepper",
+        "veggiesdelight:roasted_zucchini",
+        "#c:mushrooms"
+      ]
     },
-    [
-      {
-        "tag": "c:crops/broccoli"
-      },
-      {
-        "tag": "c:foods/leafy_green"
-      }
-    ],
-    [
-      {
-        "item": "veggiesdelight:smoked_bellpepper"
-      },
-      {
-        "item": "veggiesdelight:roasted_zucchini"
-      },
-      {
-        "tag": "c:mushrooms"
-      }
-    ],
-    {
-      "item": "farmersdelight:cooked_rice"
-    }
+    "farmersdelight:cooked_rice"
   ],
   "result": {
-    "count": 1,
     "id": "veggiesdelight:vegetables_wrap"
   }
 }

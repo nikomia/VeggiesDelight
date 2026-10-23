@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#c:foods/dough",
+    "#c:crops/onion",
+    {
+      "neoforge:ingredient_type": "neoforge:compound",
+      "children": [
+        "#c:crops/broccoli",
+        "#c:foods/leafy_green"
+      ]
+    },
+    {
+      "neoforge:ingredient_type": "neoforge:compound",
+      "children": [
+        "veggiesdelight:smoked_bellpepper",
+        "veggiesdelight:roasted_zucchini",
+        "#c:mushrooms"
+      ]
+    },
+    "farmersdelight:cooked_rice"
+  ],
+  "result": {
+    "id": "veggiesdelight:vegetables_wrap"
+  }
+}

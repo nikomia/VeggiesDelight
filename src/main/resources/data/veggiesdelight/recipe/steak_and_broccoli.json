@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:cooked_beef",
+    "#c:crops/broccoli",
+    "farmersdelight:cooked_rice",
+    "minecraft:bowl"
+  ],
+  "result": {
+    "id": "veggiesdelight:steak_and_broccoli"
+  }
+}

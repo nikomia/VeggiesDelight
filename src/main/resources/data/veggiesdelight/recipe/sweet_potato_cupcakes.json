@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "veggiesdelight:sweet_potato_dough",
+    "#c:eggs",
+    "#c:drinks/milk"
+  ],
+  "result": {
+    "count": 3,
+    "id": "veggiesdelight:sweet_potato_cupcake"
+  }
+}

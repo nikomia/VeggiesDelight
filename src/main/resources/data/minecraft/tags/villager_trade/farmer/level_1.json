@@ -1,0 +1,32 @@
+{
+  "values": [
+    {
+      "id": "veggiesdelight:farmer/1/bellpepper_emerald",
+      "required": false
+    },
+    {
+      "id": "veggiesdelight:farmer/1/broccoli_emerald",
+      "required": false
+    },
+    {
+      "id": "veggiesdelight:farmer/1/cauliflower_emerald",
+      "required": false
+    },
+    {
+      "id": "veggiesdelight:farmer/1/garlic_emerald",
+      "required": false
+    },
+    {
+      "id": "veggiesdelight:farmer/1/sweet_potato_emerald",
+      "required": false
+    },
+    {
+      "id": "veggiesdelight:farmer/1/turnip_emerald",
+      "required": false
+    },
+    {
+      "id": "veggiesdelight:farmer/1/zucchini_emerald",
+      "required": false
+    }
+  ]
+}

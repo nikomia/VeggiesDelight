@@ -1,0 +1,36 @@
+{
+  "values": [
+    {
+      "id": "veggiesdelight:wandering_trader/emerald_bellpepper_seeds",
+      "required": false
+    },
+    {
+      "id": "veggiesdelight:wandering_trader/emerald_broccoli_seeds",
+      "required": false
+    },
+    {
+      "id": "veggiesdelight:wandering_trader/emerald_cauliflower_seeds",
+      "required": false
+    },
+    {
+      "id": "veggiesdelight:wandering_trader/emerald_garlic_clove",
+      "required": false
+    },
+    {
+      "id": "veggiesdelight:wandering_trader/emerald_sweet_potato",
+      "required": false
+    },
+    {
+      "id": "veggiesdelight:wandering_trader/emerald_turnip_seeds",
+      "required": false
+    },
+    {
+      "id": "veggiesdelight:wandering_trader/emerald_zucchini_seeds",
+      "required": false
+    },
+    {
+      "id": "veggiesdelight:wandering_trader/emerald_dandelion_leaf",
+      "required": false
+    }
+  ]
+}

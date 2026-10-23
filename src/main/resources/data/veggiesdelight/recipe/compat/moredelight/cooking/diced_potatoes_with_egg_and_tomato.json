@@ -9,22 +9,13 @@
   "cookingtime": 400,
   "experience": 1.0,
   "ingredients": [
-    {
-      "item": "moredelight:diced_potatoes"
-    },
-    {
-      "tag": "c:foods/cooked_egg"
-    },
-    {
-      "tag": "c:crops/tomato"
-    },
-    {
-      "tag": "c:crops/garlic"
-    }
+    "moredelight:diced_potatoes",
+    "#c:foods/cooked_egg",
+    "#c:crops/tomato",
+    "#c:crops/garlic"
   ],
   "recipe_book_tab": "meals",
   "result": {
-    "count": 1,
     "id": "moredelight:diced_potatoes_with_egg_and_tomato"
   }
 }

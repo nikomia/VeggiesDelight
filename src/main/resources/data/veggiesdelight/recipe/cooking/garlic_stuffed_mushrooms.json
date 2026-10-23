@@ -1,0 +1,13 @@
+{
+  "type": "farmersdelight:cooking",
+  "experience": 1.0,
+  "ingredients": [
+    "#c:crops/garlic",
+    "#c:crops/cabbage",
+    "minecraft:brown_mushroom",
+    "minecraft:brown_mushroom"
+  ],
+  "result": {
+    "id": "veggiesdelight:garlic_stuffed_mushrooms"
+  }
+}

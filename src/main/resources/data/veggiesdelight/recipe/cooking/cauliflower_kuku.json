@@ -1,0 +1,17 @@
+{
+  "type": "farmersdelight:cooking",
+  "container": {
+    "id": "minecraft:bowl"
+  },
+  "experience": 1.0,
+  "ingredients": [
+    "veggiesdelight:cauliflower",
+    "#c:crops/onion",
+    "#c:crops/garlic",
+    "#c:drinks/milk"
+  ],
+  "recipe_book_tab": "meals",
+  "result": {
+    "id": "veggiesdelight:cauliflower_kuku"
+  }
+}

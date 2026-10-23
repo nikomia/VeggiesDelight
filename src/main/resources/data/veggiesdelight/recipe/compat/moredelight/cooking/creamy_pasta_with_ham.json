@@ -9,22 +9,13 @@
   "cookingtime": 400,
   "experience": 1.0,
   "ingredients": [
-    {
-      "tag": "c:drinks/milk"
-    },
-    {
-      "tag": "c:foods/pasta"
-    },
-    {
-      "item": "farmersdelight:ham"
-    },
-    {
-      "tag": "c:crops/garlic"
-    }
+    "#c:drinks/milk",
+    "#c:foods/pasta",
+    "farmersdelight:ham",
+    "#c:crops/garlic"
   ],
   "recipe_book_tab": "meals",
   "result": {
-    "count": 1,
     "id": "moredelight:creamy_pasta_with_ham"
   }
 }

@@ -1,16 +1,19 @@
 {
   "type": "farmersdelight:pastry_slicing",
-  "conditions": [
-    {
-      "condition": "minecraft:match_tool",
-      "predicate": {
-        "items": "#farmersdelight:tools/knives"
+  "slice": "veggiesdelight:beetroot_brownie",
+  "condition": {
+    "type": "minecraft:all_of",
+    "terms": [
+      {
+        "type": "minecraft:match_tool",
+        "predicate": {
+          "items": "#farmersdelight:tools/knives"
+        }
+      },
+      {
+        "type": "minecraft:match_block",
+        "blocks": "veggiesdelight:beetroot_brownie_tray"
       }
-    },
-    {
-      "condition": "minecraft:block_state_property",
-      "block": "veggiesdelight:beetroot_brownie_tray"
-    }
-  ],
-  "slice": "veggiesdelight:beetroot_brownie"
+    ]
+  }
 }

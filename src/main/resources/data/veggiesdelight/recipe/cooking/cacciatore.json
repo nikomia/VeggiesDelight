@@ -1,0 +1,16 @@
+{
+  "type": "farmersdelight:cooking",
+  "container": {
+    "id": "minecraft:bowl"
+  },
+  "experience": 1.0,
+  "ingredients": [
+    "#c:crops/bellpepper",
+    "#c:foods/raw_chicken",
+    "#c:crops/tomato"
+  ],
+  "recipe_book_tab": "meals",
+  "result": {
+    "id": "veggiesdelight:cacciatore"
+  }
+}

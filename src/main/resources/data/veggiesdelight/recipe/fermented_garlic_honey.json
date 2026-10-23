@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "veggiesdelight:garlic_clove",
+    "veggiesdelight:garlic_clove",
+    "veggiesdelight:garlic_clove",
+    "veggiesdelight:garlic_clove",
+    "minecraft:honey_bottle"
+  ],
+  "result": {
+    "id": "veggiesdelight:fermented_garlic_honey"
+  }
+}

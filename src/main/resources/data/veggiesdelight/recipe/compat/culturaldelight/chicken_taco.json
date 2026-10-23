@@ -7,32 +7,20 @@
   ],
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
+    "culturaldelights:tortilla",
+    "#culturaldelights:cooked_chickens",
     {
-      "item": "culturaldelights:tortilla"
+      "neoforge:ingredient_type": "neoforge:compound",
+      "children": [
+        "#c:crops/garlic",
+        "#c:crops/onion"
+      ]
     },
-    {
-      "tag": "culturaldelights:cooked_chickens"
-    },
-    [
-	  {
-        "tag": "c:crops/garlic"
-      },
-      {
-        "tag": "c:crops/onion"
-      }
-    ],
-    {
-      "item": "farmersdelight:tomato_sauce"
-    },
-    {
-      "item": "veggiesdelight:smoked_bellpepper"
-    },
-    {
-      "item": "culturaldelights:corn_cob"
-    }
+    "farmersdelight:tomato_sauce",
+    "veggiesdelight:smoked_bellpepper",
+    "culturaldelights:corn_cob"
   ],
   "result": {
-    "count": 1,
     "id": "culturaldelights:chicken_taco"
   }
 }

@@ -1,0 +1,19 @@
+{
+  "type": "farmersdelight:cutting",
+  "ingredients": [
+    "veggiesdelight:wild_garlic"
+  ],
+  "result": [
+    {
+      "item": {
+        "id": "veggiesdelight:garlic_clove"
+      }
+    },
+    {
+      "item": {
+        "id": "minecraft:white_dye"
+      }
+    }
+  ],
+  "tool": "#c:tools/knife"
+}

@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#c:foods/leafy_green",
+    "#c:crops/turnip",
+    "minecraft:bowl"
+  ],
+  "result": {
+    "id": "veggiesdelight:turnip_salad"
+  }
+}

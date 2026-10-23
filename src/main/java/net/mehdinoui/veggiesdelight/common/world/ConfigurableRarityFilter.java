@@ -3,15 +3,13 @@ package net.mehdinoui.veggiesdelight.common.world;
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.MapCodec;
 import net.mehdinoui.veggiesdelight.Configuration;
-import net.mehdinoui.veggiesdelight.common.registry.ModPlacementModifiers;
 import net.minecraft.core.BlockPos;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.level.levelgen.placement.PlacementContext;
 import net.minecraft.world.level.levelgen.placement.PlacementFilter;
-import net.minecraft.world.level.levelgen.placement.PlacementModifierType;
 import org.jetbrains.annotations.NotNull;
 
-public class ConfigurableRarityFilter extends PlacementFilter {
+public class ConfigurableRarityFilter implements PlacementFilter {
     public static final MapCodec<ConfigurableRarityFilter> CODEC =
             Codec.STRING.fieldOf("config_key")
                     .xmap(ConfigurableRarityFilter::new, ConfigurableRarityFilter::getConfigKey);
@@ -27,7 +25,7 @@ public class ConfigurableRarityFilter extends PlacementFilter {
     }
 
     @Override
-    protected boolean shouldPlace(@NotNull PlacementContext ctx, @NotNull RandomSource random, @NotNull BlockPos pos) {
+    public boolean shouldPlace(@NotNull PlacementContext ctx, @NotNull RandomSource random, @NotNull BlockPos pos) {
         int chance = getConfigValue(this.configKey);
         if (chance == 0) {
             return false;
@@ -53,7 +51,7 @@ public class ConfigurableRarityFilter extends PlacementFilter {
     }
 
     @Override
-    public @NotNull PlacementModifierType<?> type() {
-        return ModPlacementModifiers.CONFIGURABLE_RARITY_FILTER.get();
+    public @NotNull MapCodec<? extends PlacementFilter> codec() {
+        return CODEC;
     }
 }

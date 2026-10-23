@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:smoking",
+  "category": "food",
+  "cookingtime": 200,
+  "experience": 0.35,
+  "ingredient": "veggiesdelight:bellpepper",
+  "result": {
+    "id": "veggiesdelight:smoked_bellpepper"
+  }
+}

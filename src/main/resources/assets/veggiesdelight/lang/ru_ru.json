@@ -122,24 +122,24 @@
   "veggiesdelight.advancement.r_all_veggies": "Поймай их всех!",
   "veggiesdelight.advancement.r_all_veggies.desc": "Соберите все овощи",
 
-  "veggiesdelight.advancement.r_bellpepper_master": "Доктор Пеппер",
-  "veggiesdelight.advancement.r_bellpepper_master.desc": "Приготовьте все блюда из болгарского перца",
+  "veggiesdelight.advancement.vd_bellpepper_master": "Доктор Пеппер",
+  "veggiesdelight.advancement.vd_bellpepper_master.desc": "Приготовьте все блюда из болгарского перца",
 
   "veggiesdelight.advancement.vd_broccoli_master": "Брокколи босс",
   "veggiesdelight.advancement.vd_broccoli_master.desc": "Приготовьте все блюда из брокколи",
 
-  "veggiesdelight.advancement.r_cauliflower_master": "Мастер цветной капусты",
-  "veggiesdelight.advancement.r_cauliflower_master.desc": "Приготовьте все блюда из цветной капусты",
+  "veggiesdelight.advancement.vd_cauliflower_master": "Мастер цветной капусты",
+  "veggiesdelight.advancement.vd_cauliflower_master.desc": "Приготовьте все блюда из цветной капусты",
 
-  "veggiesdelight.advancement.r_garlic_master": "Чеснок-младший",
-  "veggiesdelight.advancement.r_garlic_master.desc": "Приготовьте все блюда из чеснока",
+  "veggiesdelight.advancement.vd_garlic_master": "Чеснок-младший",
+  "veggiesdelight.advancement.vd_garlic_master.desc": "Приготовьте все блюда из чеснока",
 
-  "veggiesdelight.advancement.r_sweet_potato_master": "Сладкая победа",
-  "veggiesdelight.advancement.r_sweet_potato_master.desc": "Приготовьте все блюда из сладкого картофеля",
+  "veggiesdelight.advancement.vd_sweet_potato_master": "Сладкая победа",
+  "veggiesdelight.advancement.vd_sweet_potato_master.desc": "Приготовьте все блюда из сладкого картофеля",
 
   "veggiesdelight.advancement.vd_turnip_master": "Репа-ритм",
   "veggiesdelight.advancement.vd_turnip_master.desc": "Приготовьте все блюда из репы",
 
-  "veggiesdelight.advancement.vd_zucchini_master": "Зенит цукинии",
+  "veggiesdelight.advancement.vd_zucchini_master": "Зенит цукини",
   "veggiesdelight.advancement.vd_zucchini_master.desc": "Приготовьте все блюда из цукини"
 }

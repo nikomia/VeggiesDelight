@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#c:foods/cooked_cod",
+    "veggiesdelight:roasted_garlic_clove",
+    "veggiesdelight:roasted_garlic_clove",
+    "minecraft:bowl",
+    "#c:crops/onion"
+  ],
+  "result": {
+    "id": "veggiesdelight:garlic_baked_cod"
+  }
+}

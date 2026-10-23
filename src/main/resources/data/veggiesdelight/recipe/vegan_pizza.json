@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "O": "farmersdelight:tomato_sauce",
+    "a": "#c:crops/bellpepper",
+    "b": "#c:foods/vegetable",
+    "c": "#c:crops/onion",
+    "x": "#c:foods/dough"
+  },
+  "pattern": [
+    "abc",
+    "xOx"
+  ],
+  "result": {
+    "id": "veggiesdelight:vegan_pizza"
+  }
+}

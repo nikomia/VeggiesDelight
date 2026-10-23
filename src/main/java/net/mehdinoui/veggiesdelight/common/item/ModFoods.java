@@ -1,218 +1,156 @@
 package net.mehdinoui.veggiesdelight.common.item;
 
+import net.minecraft.core.Holder;
+import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.food.FoodProperties;
+import net.minecraft.world.item.component.Consumable;
+import net.minecraft.world.item.component.Consumables;
+import net.minecraft.world.item.consume_effects.ApplyStatusEffectsConsumeEffect;
+import org.jspecify.annotations.Nullable;
 import vectorwing.farmersdelight.common.registry.ModEffects;
 
 import static vectorwing.farmersdelight.common.FoodValues.*;
 
-public class ModFoods {
+/**
+ * Since 1.21.2 food effects and eating speed live in the Consumable component, so each food is a pair.
+ * {@code food} is null for drinks without nutrition.
+ */
+public record ModFoods(@Nullable FoodProperties food, Consumable consumable) {
 
     // RAW CROPS
-    public static final FoodProperties DANDELION_LEAF = new FoodProperties.Builder().
-            nutrition(1).saturationModifier(0.1F).
-            effect(() -> new MobEffectInstance(MobEffects.REGENERATION, 100, 0), 1.0F)
-            .fast().build();
-    public static final FoodProperties BELLPEPPER = new FoodProperties.Builder().
-            nutrition(2).saturationModifier(0.2F).build();
-    public static final FoodProperties BROCCOLI = new FoodProperties.Builder().
-            nutrition(2).saturationModifier(0.4f).build();
-    public static final FoodProperties CAULIFLOWER = new FoodProperties.Builder().
-            nutrition(4).saturationModifier(0.4f).build();
-    public static final FoodProperties GARLIC_CLOVE = new FoodProperties.Builder().
-            nutrition(1).saturationModifier(0.1f).fast().build();
-    public static final FoodProperties SWEET_POTATO = new FoodProperties.Builder().
-            nutrition(2).saturationModifier(0.4f).build();
-    public static final FoodProperties TURNIP = new FoodProperties.Builder().
-            nutrition(2).saturationModifier(0.4f).build();
-    public static final FoodProperties ZUCCHINI = new FoodProperties.Builder().
-            nutrition(3).saturationModifier(0.4f).build();
-
+    public static final ModFoods DANDELION_LEAF = food(1, 0.1F).effect(MobEffects.REGENERATION, 100).fast().build();
+    public static final ModFoods BELLPEPPER = food(2, 0.2F).build();
+    public static final ModFoods BROCCOLI = food(2, 0.4F).build();
+    public static final ModFoods CAULIFLOWER = food(4, 0.4F).build();
+    public static final ModFoods GARLIC_CLOVE = food(1, 0.1F).fast().build();
+    public static final ModFoods SWEET_POTATO = food(2, 0.4F).build();
+    public static final ModFoods TURNIP = food(2, 0.4F).build();
+    public static final ModFoods ZUCCHINI = food(3, 0.4F).build();
 
     // DRINKS
-    public static final FoodProperties CARROT_JUICE = new FoodProperties.Builder().
-            effect(() -> new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 0), 1.0F)
-            .alwaysEdible().build();
-    public static final FoodProperties DANDELION_JUICE = new FoodProperties.Builder().
-            effect(() -> new MobEffectInstance(MobEffects.REGENERATION, 400, 0), 1.0F)
-            .alwaysEdible().build();
-    public static final FoodProperties TURNIP_WATER = new FoodProperties.Builder().
-            effect(() -> new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 400, 0), 1.0F)
-            .alwaysEdible().build();
-    public static final FoodProperties FERMENTED_GARLIC_HONEY = new FoodProperties.Builder().
-            nutrition(7).saturationModifier(0.7F)
-            .effect(() -> new MobEffectInstance(MobEffects.REGENERATION, 100, 0), 1.0F)
-            .effect(() -> new MobEffectInstance(MobEffects.HEALTH_BOOST, 100, 0), 1.0F)
-            .alwaysEdible().build();
-
+    public static final ModFoods CARROT_JUICE = drink().effect(MobEffects.NIGHT_VISION, 400).build();
+    public static final ModFoods DANDELION_JUICE = drink().effect(MobEffects.REGENERATION, 400).build();
+    public static final ModFoods TURNIP_WATER = drink().effect(MobEffects.RESISTANCE, 400).build();
+    public static final ModFoods FERMENTED_GARLIC_HONEY = drink().nutrition(7, 0.7F)
+            .effect(MobEffects.REGENERATION, 100).effect(MobEffects.HEALTH_BOOST, 100).build();
 
     // BASIC INGREDIENTS & COMPONENTS
-    public static final FoodProperties SMOKED_BELLPEPPER = new FoodProperties.Builder().
-            nutrition(4).saturationModifier(0.4f).build();
-    public static final FoodProperties BAKED_SWEET_POTATO = new FoodProperties.Builder().
-            nutrition(4).saturationModifier(0.5f).build();
-    public static final FoodProperties CAULIFLOWER_FLORET = new FoodProperties.Builder().
-            nutrition(1).saturationModifier(0.1f).fast().build();
-    public static final FoodProperties ROASTED_CAULIFLOWER_FLORET = new FoodProperties.Builder().
-            nutrition(2).saturationModifier(0.3f).fast().build();
-    public static final FoodProperties ROASTED_GARLIC_CLOVE = new FoodProperties.Builder().
-            nutrition(2).saturationModifier(0.2f).fast().build();
-    public static final FoodProperties ZUCCHINI_SLICE = new FoodProperties.Builder().
-            nutrition(2).saturationModifier(0.1f).build();
-    public static final FoodProperties ROASTED_ZUCCHINI = new FoodProperties.Builder().
-            nutrition(4).saturationModifier(0.4f).build();
-    public static final FoodProperties POTATO_NOODLE = new FoodProperties.Builder().
-            nutrition(4).saturationModifier(0.2f).build();
-    public static final FoodProperties SWEET_POTATO_DOUGH = new FoodProperties.Builder().
-            nutrition(3).saturationModifier(0.2F)
-            .effect(() -> new MobEffectInstance(MobEffects.HUNGER, 300, 0), 0.3F)
-            .build();
-    public static final FoodProperties RAW_VEGETARIAN_PATTY = new FoodProperties.Builder().
-            nutrition(3).saturationModifier(0.3f).build();
-    public static final FoodProperties COOKED_VEGETARIAN_PATTY = new FoodProperties.Builder().
-            nutrition(6).saturationModifier(0.8f).build();
-
+    public static final ModFoods SMOKED_BELLPEPPER = food(4, 0.4F).build();
+    public static final ModFoods BAKED_SWEET_POTATO = food(4, 0.5F).build();
+    public static final ModFoods CAULIFLOWER_FLORET = food(1, 0.1F).fast().build();
+    public static final ModFoods ROASTED_CAULIFLOWER_FLORET = food(2, 0.3F).fast().build();
+    public static final ModFoods ROASTED_GARLIC_CLOVE = food(2, 0.2F).fast().build();
+    public static final ModFoods ZUCCHINI_SLICE = food(2, 0.1F).build();
+    public static final ModFoods ROASTED_ZUCCHINI = food(4, 0.4F).build();
+    public static final ModFoods POTATO_NOODLE = food(4, 0.2F).build();
+    public static final ModFoods SWEET_POTATO_DOUGH = food(3, 0.2F).effect(MobEffects.HUNGER, 300, 0.3F).build();
+    public static final ModFoods RAW_VEGETARIAN_PATTY = food(3, 0.3F).build();
+    public static final ModFoods COOKED_VEGETARIAN_PATTY = food(6, 0.8F).build();
 
     // DESSERTS
-    public static final FoodProperties BEETROOT_BROWNIE = new FoodProperties.Builder().
-            nutrition(6).saturationModifier(0.5f)
-            .effect(() -> new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 100, 0), 1.0F)
-            .build();
-    public static final FoodProperties CARROT_CAKE_SLICE = new FoodProperties.Builder().
-            nutrition(3).saturationModifier(0.2f).build();
-    public static final FoodProperties SWEET_POTATO_PIE_SLICE = new FoodProperties.Builder().
-            nutrition(5).saturationModifier(0.3f).build();
-    public static final FoodProperties SWEET_POTATO_CUPCAKE = new FoodProperties.Builder().
-            nutrition(6).saturationModifier(0.5f)
-            .effect(() -> new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 100, 0), 1.0F)
-            .build();
-    public static final FoodProperties SWEET_POTATO_PANCAKES = new FoodProperties.Builder().
-            nutrition(12).saturationModifier(0.8f)
-            .effect(() -> new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 100, 0), 1.0F)
-            .effect(()-> new MobEffectInstance(ModEffects.NOURISHMENT,MEDIUM_DURATION,0),1.0f)
-            .build();
-
+    public static final ModFoods BEETROOT_BROWNIE = food(6, 0.5F).effect(MobEffects.SPEED, 100).build();
+    public static final ModFoods CARROT_CAKE_SLICE = food(3, 0.2F).build();
+    public static final ModFoods SWEET_POTATO_PIE_SLICE = food(5, 0.3F).build();
+    public static final ModFoods SWEET_POTATO_CUPCAKE = food(6, 0.5F).effect(MobEffects.SPEED, 100).build();
+    public static final ModFoods SWEET_POTATO_PANCAKES = food(12, 0.8F).effect(MobEffects.SPEED, 100).nourishment(MEDIUM_DURATION).build();
 
     // SALADS
-    public static final FoodProperties BROCCOLI_SALAD = new FoodProperties.Builder().
-            nutrition(6).saturationModifier(0.6f)
-            .effect(() -> new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE,100 , 0), 1.0F).build();
-    public static final FoodProperties CESAR_SALAD = new FoodProperties.Builder().
-            nutrition(10).saturationModifier(0.7f)
-            .effect(() -> new MobEffectInstance(MobEffects.DAMAGE_BOOST, 100, 0), 1.0F).build();
-    public static final FoodProperties COLESLAW = new FoodProperties.Builder().
-            nutrition(8).saturationModifier(0.6f)
-            .effect(() -> new MobEffectInstance(ModEffects.NOURISHMENT, MEDIUM_DURATION, 0), 1.0F)
-            .build();
-    public static final FoodProperties TURNIP_SALAD = new FoodProperties.Builder().
-            nutrition(6).saturationModifier(0.6f)
-            .effect(() -> new MobEffectInstance(MobEffects.DIG_SPEED, 100, 0), 1.0F)
-            .build();
-
+    public static final ModFoods BROCCOLI_SALAD = food(6, 0.6F).effect(MobEffects.RESISTANCE, 100).build();
+    public static final ModFoods CESAR_SALAD = food(10, 0.7F).effect(MobEffects.STRENGTH, 100).build();
+    public static final ModFoods COLESLAW = food(8, 0.6F).nourishment(MEDIUM_DURATION).build();
+    public static final ModFoods TURNIP_SALAD = food(6, 0.6F).effect(MobEffects.HASTE, 100).build();
 
     // SNACKS & BAKED GOODS
-    public static final FoodProperties CAULIFLOWER_BREAD = new FoodProperties.Builder().
-            nutrition(6).saturationModifier(0.6f).build();
-    public static final FoodProperties GARLIC_BREAD = new FoodProperties.Builder().
-            nutrition(5).saturationModifier(0.4f).fast().build();
-    public static final FoodProperties GARLIC_STUFFED_MUSHROOMS = new FoodProperties.Builder().
-            nutrition(7).saturationModifier(0.6f).build();
-    public static final FoodProperties TURNIP_MUTTON_SKEWER = new FoodProperties.Builder().
-            nutrition(7).saturationModifier(0.7f).build();
-    public static final FoodProperties CHICKEN_FAJITAS_WRAP = new FoodProperties.Builder().
-            nutrition(10).saturationModifier(0.7f).build();
-    public static final FoodProperties VEGETABLES_WRAP = new FoodProperties.Builder().
-            nutrition(12).saturationModifier(0.8f).build();
-    public static final FoodProperties VEGETARIAN_BURGER = new FoodProperties.Builder().
-            nutrition(12).saturationModifier(0.8f).build();
-    public static final FoodProperties ZUCCHINI_SANDWICH = new FoodProperties.Builder().
-            nutrition(10).saturationModifier(0.7f).build();
-    public static final FoodProperties UNCOOKED_MHADJEB = new FoodProperties.Builder().
-            nutrition(6).saturationModifier(0.4F).build();
-    public static final FoodProperties MHADJEB= new FoodProperties.Builder().
-            nutrition(12).saturationModifier(0.8f).build();
-    public static final FoodProperties VEGAN_PIZZA_SLICE = new FoodProperties.Builder().
-            nutrition(5).saturationModifier(0.5f).build();
-    public static final FoodProperties ZUCCHINI_QUICHE_SLICE = new FoodProperties.Builder().
-            nutrition(6).saturationModifier(0.5f).build();
-    public static final FoodProperties STUFFED_ZUCCHINI_BOAT = new FoodProperties.Builder().
-            nutrition(10).saturationModifier(0.7f).build();
-
+    public static final ModFoods CAULIFLOWER_BREAD = food(6, 0.6F).build();
+    public static final ModFoods GARLIC_BREAD = food(5, 0.4F).fast().build();
+    public static final ModFoods GARLIC_STUFFED_MUSHROOMS = food(7, 0.6F).build();
+    public static final ModFoods TURNIP_MUTTON_SKEWER = food(7, 0.7F).build();
+    public static final ModFoods CHICKEN_FAJITAS_WRAP = food(10, 0.7F).build();
+    public static final ModFoods VEGETABLES_WRAP = food(12, 0.8F).build();
+    public static final ModFoods VEGETARIAN_BURGER = food(12, 0.8F).build();
+    public static final ModFoods ZUCCHINI_SANDWICH = food(10, 0.7F).build();
+    public static final ModFoods UNCOOKED_MHADJEB = food(6, 0.4F).build();
+    public static final ModFoods MHADJEB = food(12, 0.8F).build();
+    public static final ModFoods VEGAN_PIZZA_SLICE = food(5, 0.5F).build();
+    public static final ModFoods ZUCCHINI_QUICHE_SLICE = food(6, 0.5F).build();
+    public static final ModFoods STUFFED_ZUCCHINI_BOAT = food(10, 0.7F).build();
 
     // SOUPS & BOWLED MEALS
-    public static final FoodProperties BROCCOLI_SOUP = new FoodProperties.Builder().
-            nutrition(10).saturationModifier(0.7f)
-            .effect(() -> new MobEffectInstance(ModEffects.NOURISHMENT, BRIEF_DURATION, 0), 1.0F).build();
-    public static final FoodProperties CAULIFLOWER_SOUP = new FoodProperties.Builder().
-            nutrition(10).saturationModifier(0.7f)
-            .effect(() -> new MobEffectInstance(ModEffects.NOURISHMENT, BRIEF_DURATION, 0), 1.0F).build();
-    public static final FoodProperties GARLIC_CHICKEN_STEW = new FoodProperties.Builder().
-            nutrition(12).saturationModifier(0.8f)
-            .effect(() -> new MobEffectInstance(ModEffects.NOURISHMENT, MEDIUM_DURATION, 0), 1.0F).build();
-    public static final FoodProperties TURNIP_BEEF_STEW = new FoodProperties.Builder().
-            nutrition(14).saturationModifier(0.75f)
-            .effect(() -> new MobEffectInstance(ModEffects.NOURISHMENT, LONG_DURATION, 0), 1.0F).build();
-    public static final FoodProperties CACCIATORE = new FoodProperties.Builder().
-            nutrition(14).saturationModifier(0.75f)
-            .effect(() -> new MobEffectInstance(ModEffects.NOURISHMENT, LONG_DURATION, 0), 1.0F).build();
-    public static final FoodProperties MASHED_POTATOES = new FoodProperties.Builder().
-            nutrition(10).saturationModifier(0.7f)
-            .effect(()-> new MobEffectInstance(ModEffects.NOURISHMENT, BRIEF_DURATION,0),1.0f).build();
-    public static final FoodProperties POTATO_NOODLES = new FoodProperties.Builder().
-            nutrition(12).saturationModifier(0.8f)
-            .effect(() -> new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 100, 0), 1.0F)
-            .effect(() -> new MobEffectInstance(ModEffects.NOURISHMENT, MEDIUM_DURATION,0), 1.0F).build();
-
+    public static final ModFoods BROCCOLI_SOUP = food(10, 0.7F).nourishment(BRIEF_DURATION).build();
+    public static final ModFoods CAULIFLOWER_SOUP = food(10, 0.7F).nourishment(BRIEF_DURATION).build();
+    public static final ModFoods GARLIC_CHICKEN_STEW = food(12, 0.8F).nourishment(MEDIUM_DURATION).build();
+    public static final ModFoods TURNIP_BEEF_STEW = food(14, 0.75F).nourishment(LONG_DURATION).build();
+    public static final ModFoods CACCIATORE = food(14, 0.75F).nourishment(LONG_DURATION).build();
+    public static final ModFoods MASHED_POTATOES = food(10, 0.7F).nourishment(BRIEF_DURATION).build();
+    public static final ModFoods POTATO_NOODLES = food(12, 0.8F).effect(MobEffects.RESISTANCE, 100).nourishment(MEDIUM_DURATION).build();
 
     // PLATED MEALS
-    public static final FoodProperties DANDELION_WITH_EGGS = new FoodProperties.Builder(). // Note: DANDELION_AND_EGGS in output.accept.
-            nutrition(10).saturationModifier(0.6f)
-            .effect(() -> new MobEffectInstance(MobEffects.REGENERATION, 100, 0), 1.0F)
-            .effect(() -> new MobEffectInstance(ModEffects.NOURISHMENT, BRIEF_DURATION, 0), 1.0F)
-            .build();
-    public static final FoodProperties CAULIFLOWER_KUKU = new FoodProperties.Builder().
-            nutrition(12).saturationModifier(0.8f)
-            .effect(() -> new MobEffectInstance(ModEffects.NOURISHMENT, MEDIUM_DURATION, 0), 1.0F).build();
-    public static final FoodProperties TURNIP_CAKE = new FoodProperties.Builder().
-            nutrition(14).saturationModifier(0.75f)
-            .effect(()-> new MobEffectInstance(ModEffects.NOURISHMENT, LONG_DURATION,0),1.0f)
-            .build();
-    public static final FoodProperties RICE_AND_VEGETABLES = new FoodProperties.Builder().
-            nutrition(14).saturationModifier(0.75f)
-            .effect(() -> new MobEffectInstance(ModEffects.NOURISHMENT, LONG_DURATION, 0), 1.0F).build();
-    public static final FoodProperties ROASTED_VEGETABLES = new FoodProperties.Builder().
-            nutrition(12).saturationModifier(0.8f)
-            .effect(() -> new MobEffectInstance(ModEffects.NOURISHMENT, MEDIUM_DURATION, 0), 1.0F).build();
-    public static final FoodProperties SHAKSHOUKA = new FoodProperties.Builder().
-            nutrition(12).saturationModifier(0.8f)
-            .effect(() -> new MobEffectInstance(ModEffects.NOURISHMENT, MEDIUM_DURATION, 0), 1.0F).build();
-    public static final FoodProperties PASTA_WITH_BROCCOLI = new FoodProperties.Builder().
-            nutrition(12).saturationModifier(0.8f)
-            .effect(() -> new MobEffectInstance(ModEffects.NOURISHMENT, MEDIUM_DURATION, 0), 1.0F).build();
-    public static final FoodProperties GARLIC_RICE_WITH_CAULIFLOWER = new FoodProperties.Builder().
-            nutrition(14).saturationModifier(0.75f)
-            .effect(() -> new MobEffectInstance(ModEffects.NOURISHMENT, LONG_DURATION, 0), 1.0F).build();
-    public static final FoodProperties STEAK_AND_BROCCOLI = new FoodProperties.Builder().
-            nutrition(12).saturationModifier(0.8f)
-            .effect(() -> new MobEffectInstance(ModEffects.NOURISHMENT, MEDIUM_DURATION, 0), 1.0F).build();
-    public static final FoodProperties FISH_AND_CHIPS = new FoodProperties.Builder().
-            nutrition(10).saturationModifier(0.6f)
-            .effect(()-> new MobEffectInstance(ModEffects.NOURISHMENT, BRIEF_DURATION,0),1.0f)
-            .build();
-    public static final FoodProperties GARLIC_BAKED_COD = new FoodProperties.Builder().
-            nutrition(10).saturationModifier(0.6f)
-            .effect(() -> new MobEffectInstance(ModEffects.NOURISHMENT, LONG_DURATION, 0), 1.0F).build();
-    public static final FoodProperties STUFFED_ZUCCHINIS = new FoodProperties.Builder().
-            nutrition(14).saturationModifier(0.75f)
-            .effect(() -> new MobEffectInstance(ModEffects.NOURISHMENT, LONG_DURATION, 0), 1.0F)
-            .build();
+    public static final ModFoods DANDELION_WITH_EGGS = food(10, 0.6F).effect(MobEffects.REGENERATION, 100).nourishment(BRIEF_DURATION).build();
+    public static final ModFoods CAULIFLOWER_KUKU = food(12, 0.8F).nourishment(MEDIUM_DURATION).build();
+    public static final ModFoods TURNIP_CAKE = food(14, 0.75F).nourishment(LONG_DURATION).build();
+    public static final ModFoods RICE_AND_VEGETABLES = food(14, 0.75F).nourishment(LONG_DURATION).build();
+    public static final ModFoods ROASTED_VEGETABLES = food(12, 0.8F).nourishment(MEDIUM_DURATION).build();
+    public static final ModFoods SHAKSHOUKA = food(12, 0.8F).nourishment(MEDIUM_DURATION).build();
+    public static final ModFoods PASTA_WITH_BROCCOLI = food(12, 0.8F).nourishment(MEDIUM_DURATION).build();
+    public static final ModFoods GARLIC_RICE_WITH_CAULIFLOWER = food(14, 0.75F).nourishment(LONG_DURATION).build();
+    public static final ModFoods STEAK_AND_BROCCOLI = food(12, 0.8F).nourishment(MEDIUM_DURATION).build();
+    public static final ModFoods FISH_AND_CHIPS = food(10, 0.6F).nourishment(BRIEF_DURATION).build();
+    public static final ModFoods GARLIC_BAKED_COD = food(10, 0.6F).nourishment(LONG_DURATION).build();
+    public static final ModFoods STUFFED_ZUCCHINIS = food(14, 0.75F).nourishment(LONG_DURATION).build();
 
     // FEAST SLICES
-    public static final FoodProperties LASAGNA_SLICE = new FoodProperties.Builder().
-            nutrition(14).saturationModifier(0.75f)
-            .effect(() -> new MobEffectInstance(ModEffects.NOURISHMENT, MEDIUM_DURATION, 0), 1.0F).build();
-    public static final FoodProperties STUFFED_BELLPEPPER = new FoodProperties.Builder().
-            nutrition(8).saturationModifier(0.65f)
-            .effect(() -> new MobEffectInstance(ModEffects.NOURISHMENT, LONG_DURATION, 0), 1.0F).build();
+    public static final ModFoods LASAGNA_SLICE = food(14, 0.75F).nourishment(MEDIUM_DURATION).build();
+    public static final ModFoods STUFFED_BELLPEPPER = food(8, 0.65F).nourishment(LONG_DURATION).build();
+
+    private static Builder food(int nutrition, float saturation) {
+        return new Builder(false).nutrition(nutrition, saturation);
+    }
+
+    private static Builder drink() {
+        return new Builder(true);
+    }
+
+    private static final class Builder {
+        private final boolean drink;
+        private final Consumable.Builder consumable;
+        private FoodProperties.@Nullable Builder food;
+
+        private Builder(boolean drink) {
+            this.drink = drink;
+            this.consumable = drink ? Consumables.defaultDrink() : Consumables.defaultFood();
+        }
+
+        Builder nutrition(int nutrition, float saturation) {
+            this.food = new FoodProperties.Builder().nutrition(nutrition).saturationModifier(saturation);
+            return this;
+        }
+
+        Builder effect(Holder<MobEffect> effect, int duration) {
+            return effect(effect, duration, 1.0F);
+        }
+
+        Builder effect(Holder<MobEffect> effect, int duration, float chance) {
+            this.consumable.onConsume(new ApplyStatusEffectsConsumeEffect(new MobEffectInstance(effect, duration, 0), chance));
+            return this;
+        }
+
+        Builder nourishment(int duration) {
+            return effect(ModEffects.NOURISHMENT, duration);
+        }
+
+        Builder fast() {
+            this.consumable.consumeSeconds(0.8F);
+            return this;
+        }
+
+        ModFoods build() {
+            // Drinks were alwaysEdible in the original.
+            if (this.drink && this.food != null) {
+                this.food.alwaysEdible();
+            }
+            return new ModFoods(this.food == null ? null : this.food.build(), this.consumable.build());
+        }
+    }
 }

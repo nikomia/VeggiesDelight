@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "veggiesdelight:turnip_crate"
+  ],
+  "result": {
+    "count": 9,
+    "id": "veggiesdelight:turnip"
+  }
+}

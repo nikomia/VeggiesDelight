@@ -23,7 +23,7 @@ public class BroccoliCropBlock extends CropBlock {
     }
 
     @Override
-    public IntegerProperty getAgeProperty(){
+    protected IntegerProperty getAgeProperty(){
         return AGE;
     }
 

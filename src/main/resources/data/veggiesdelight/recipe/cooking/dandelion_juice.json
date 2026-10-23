@@ -1,0 +1,16 @@
+{
+  "type": "farmersdelight:cooking",
+  "container": {
+    "id": "minecraft:glass_bottle"
+  },
+  "experience": 1.0,
+  "ingredients": [
+    "veggiesdelight:dandelion_leaf",
+    "veggiesdelight:dandelion_leaf",
+    "minecraft:sugar_cane"
+  ],
+  "recipe_book_tab": "drinks",
+  "result": {
+    "id": "veggiesdelight:dandelion_juice"
+  }
+}

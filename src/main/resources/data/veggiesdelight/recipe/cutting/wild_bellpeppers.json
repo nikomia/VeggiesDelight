@@ -1,0 +1,20 @@
+{
+  "type": "farmersdelight:cutting",
+  "ingredients": [
+    "veggiesdelight:wild_bellpeppers"
+  ],
+  "result": [
+    {
+      "item": {
+        "id": "veggiesdelight:bellpepper_seeds"
+      }
+    },
+    {
+      "chance": 0.5,
+      "item": {
+        "id": "minecraft:green_dye"
+      }
+    }
+  ],
+  "tool": "#c:tools/knife"
+}

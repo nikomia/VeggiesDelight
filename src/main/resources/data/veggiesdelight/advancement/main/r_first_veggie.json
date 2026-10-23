@@ -35,13 +35,15 @@
               "minecraft:potato",
               "minecraft:carrot",
               "minecraft:beetroot"
-              ]
+            ]
           }
         ]
       }
     }
   },
-  "requirements":[
-    ["first"]
+  "requirements": [
+    [
+      "first"
+    ]
   ]
 }

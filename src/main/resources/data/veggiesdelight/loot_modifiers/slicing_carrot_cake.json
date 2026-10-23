@@ -1,16 +1,19 @@
 {
   "type": "farmersdelight:pastry_slicing",
-  "conditions": [
-    {
-      "condition": "minecraft:match_tool",
-      "predicate": {
-        "items": "#farmersdelight:tools/knives"
+  "slice": "veggiesdelight:carrot_cake_slice",
+  "condition": {
+    "type": "minecraft:all_of",
+    "terms": [
+      {
+        "type": "minecraft:match_tool",
+        "predicate": {
+          "items": "#farmersdelight:tools/knives"
+        }
+      },
+      {
+        "type": "minecraft:match_block",
+        "blocks": "veggiesdelight:carrot_cake"
       }
-    },
-    {
-      "condition": "minecraft:block_state_property",
-      "block": "veggiesdelight:carrot_cake"
-    }
-  ],
-  "slice": "veggiesdelight:carrot_cake_slice"
+    ]
+  }
 }

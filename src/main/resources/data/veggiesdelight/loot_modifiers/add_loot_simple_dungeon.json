@@ -1,11 +1,8 @@
 {
   "type": "farmersdelight:add_loot_table",
-  "conditions":
-  [
-    {
-      "condition": "neoforge:loot_table_id",
-      "loot_table_id": "minecraft:chests/simple_dungeon"
-    }
-  ],
-  "lootTable": "veggiesdelight:chests/vd_simple_dungeon"
+  "lootTable": "veggiesdelight:chests/vd_simple_dungeon",
+  "condition": {
+    "type": "neoforge:loot_table_id",
+    "loot_table_id": "minecraft:chests/simple_dungeon"
+  }
 }

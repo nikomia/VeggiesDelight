@@ -8,7 +8,6 @@ import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
-import net.minecraft.world.ItemInteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
@@ -27,17 +26,17 @@ public class CarrotCakeBlock extends CakeBlock {
     }
 
     @Override
-    protected @NotNull ItemInteractionResult useItemOn(ItemStack stack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hitResult) {
-        if (stack.is(ModTags.KNIVES)) {
+    protected @NotNull InteractionResult useItemOn(ItemStack stack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hitResult) {
+        if (stack.is(ModTags.Items.KNIVES)) {
             return this.cutSlice(level, pos, state, player);
         }
 
-        return ItemInteractionResult.PASS_TO_DEFAULT_BLOCK_INTERACTION;
+        return InteractionResult.TRY_WITH_EMPTY_HAND;
     }
 
     @Override
     protected @NotNull InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hitResult) {
-        if (level.isClientSide) {
+        if (level.isClientSide()) {
             if (this.customEat(level, pos, state, player).consumesAction()) {
                 return InteractionResult.SUCCESS;
             }
@@ -54,7 +53,7 @@ public class CarrotCakeBlock extends CakeBlock {
         if (!player.canEat(false)) {
             return InteractionResult.PASS;
         } else {
-            player.getFoodData().eat(ModFoods.CARROT_CAKE_SLICE);
+            player.getFoodData().eat(ModFoods.CARROT_CAKE_SLICE.food());
 
             int bites = state.getValue(BITES);
             if (bites < 6) {
@@ -67,7 +66,7 @@ public class CarrotCakeBlock extends CakeBlock {
         }
     }
 
-    private ItemInteractionResult cutSlice(Level level, BlockPos pos,
+    private InteractionResult cutSlice(Level level, BlockPos pos,
                                        BlockState state, Player player) {
         int bites = (Integer)state.getValue(BITES);
 
@@ -87,7 +86,7 @@ public class CarrotCakeBlock extends CakeBlock {
 
         ItemUtils.spawnItemEntity(level, new ItemStack(ModItems.CARROT_CAKE_SLICE.get()), x, y, z, velocityX, velocityY, velocityZ);
         level.playSound((Player)null, pos, SoundEvents.WOOL_BREAK, SoundSource.PLAYERS, 0.8F, 0.8F);
-        return ItemInteractionResult.SUCCESS;
+        return InteractionResult.SUCCESS;
     }
 }
 

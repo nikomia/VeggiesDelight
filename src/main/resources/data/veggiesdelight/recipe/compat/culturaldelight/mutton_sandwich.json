@@ -7,21 +7,12 @@
   ],
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
-    {
-      "tag": "c:foods/bread"
-    },
-    {
-      "tag": "culturaldelights:cooked_muttons"
-    },
-    {
-      "tag": "c:foods/cooked_egg"
-    },
-    {
-      "item": "veggiesdelight:turnip"
-    }
+    "#c:foods/bread",
+    "#culturaldelights:cooked_muttons",
+    "#c:foods/cooked_egg",
+    "veggiesdelight:turnip"
   ],
   "result": {
-    "count": 1,
     "id": "culturaldelights:mutton_sandwich"
   }
 }

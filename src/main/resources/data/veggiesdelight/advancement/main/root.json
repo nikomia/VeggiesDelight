@@ -1,7 +1,7 @@
 {
   "display": {
     "announce_to_chat": false,
-    "background": "farmersdelight:textures/block/rich_soil.png",
+    "background": "farmersdelight:block/rich_soil",
     "title": {
       "translate": "veggiesdelight.advancement.root"
     },

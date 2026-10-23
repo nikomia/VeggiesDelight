@@ -1,13 +1,14 @@
 package net.mehdinoui.veggiesdelight.common.crafting;
 
+import com.mojang.serialization.MapCodec;
 import net.mehdinoui.veggiesdelight.common.registry.ModItems;
 import net.mehdinoui.veggiesdelight.common.registry.ModRecipeSerializers;
 import net.mehdinoui.veggiesdelight.common.tag.VDCommonTags;
-import net.minecraft.core.HolderLookup;
 import net.minecraft.core.NonNullList;
+import net.minecraft.network.RegistryFriendlyByteBuf;
+import net.minecraft.network.codec.StreamCodec;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
-import net.minecraft.world.item.crafting.CraftingBookCategory;
 import net.minecraft.world.item.crafting.CraftingInput;
 import net.minecraft.world.item.crafting.CustomRecipe;
 import net.minecraft.world.item.crafting.RecipeSerializer;
@@ -15,10 +16,10 @@ import net.minecraft.world.level.Level;
 import net.neoforged.neoforge.common.Tags;
 
 public class SweetPotatoDoughRecipe extends CustomRecipe {
-
-    public SweetPotatoDoughRecipe(CraftingBookCategory category) {
-        super(category);
-    }
+    public static final SweetPotatoDoughRecipe INSTANCE = new SweetPotatoDoughRecipe();
+    public static final MapCodec<SweetPotatoDoughRecipe> MAP_CODEC = MapCodec.unit(INSTANCE);
+    public static final StreamCodec<RegistryFriendlyByteBuf, SweetPotatoDoughRecipe> STREAM_CODEC = StreamCodec.unit(INSTANCE);
+    public static final RecipeSerializer<SweetPotatoDoughRecipe> SERIALIZER = new RecipeSerializer<>(MAP_CODEC, STREAM_CODEC);
 
     @Override
     public boolean matches(CraftingInput input, Level level) {
@@ -46,7 +47,7 @@ public class SweetPotatoDoughRecipe extends CustomRecipe {
     }
 
     @Override
-    public ItemStack assemble(CraftingInput input, HolderLookup.Provider registries) {
+    public ItemStack assemble(CraftingInput input) {
         return new ItemStack(ModItems.SWEET_POTATO_DOUGH.get(), 3);
     }
 
@@ -65,12 +66,7 @@ public class SweetPotatoDoughRecipe extends CustomRecipe {
     }
 
     @Override
-    public boolean canCraftInDimensions(int width, int height) {
-        return width >= 2 && height >= 2;
-    }
-
-    @Override
-    public RecipeSerializer<?> getSerializer() {
+    public RecipeSerializer<SweetPotatoDoughRecipe> getSerializer() {
         return ModRecipeSerializers.SWEET_POTATO_DOUGH.get();
     }
 }

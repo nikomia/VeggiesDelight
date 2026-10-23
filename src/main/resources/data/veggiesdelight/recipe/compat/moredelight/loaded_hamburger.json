@@ -8,30 +8,15 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "tag": "c:foods/bread"
-    },
-    {
-      "item": "veggiesdelight:cooked_vegetarian_patty"
-    },
-    {
-      "tag": "c:foods/leafy_green"
-    },
-    {
-      "tag": "c:crops/tomato"
-    },
-    {
-      "tag": "c:foods/cooked_bacon"
-    },
-    {
-      "tag": "c:foods/cooked_egg"
-    },
-    {
-      "tag": "c:crops/onion"
-    }
+    "#c:foods/bread",
+    "veggiesdelight:cooked_vegetarian_patty",
+    "#c:foods/leafy_green",
+    "#c:crops/tomato",
+    "#c:foods/cooked_bacon",
+    "#c:foods/cooked_egg",
+    "#c:crops/onion"
   ],
   "result": {
-    "count": 1,
     "id": "moredelight:loaded_hamburger"
   }
 }

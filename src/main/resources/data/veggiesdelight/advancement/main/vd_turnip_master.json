@@ -19,36 +19,80 @@
     "A": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
-        "items": [{ "items": ["veggiesdelight:turnip_beef_stew"] }]
+        "items": [
+          {
+            "items": [
+              "veggiesdelight:turnip_beef_stew"
+            ]
+          }
+        ]
       }
     },
     "B": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
-        "items": [{ "items": ["veggiesdelight:turnip_cake"] }]
+        "items": [
+          {
+            "items": [
+              "veggiesdelight:turnip_cake"
+            ]
+          }
+        ]
       }
     },
     "C": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
-        "items": [{ "items": ["veggiesdelight:turnip_mutton_skewer"] }]
+        "items": [
+          {
+            "items": [
+              "veggiesdelight:turnip_mutton_skewer"
+            ]
+          }
+        ]
       }
     },
     "D": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
-        "items": [{ "items": ["veggiesdelight:turnip_salad"] }]
+        "items": [
+          {
+            "items": [
+              "veggiesdelight:turnip_salad"
+            ]
+          }
+        ]
       }
     },
     "E": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
-        "items": [{ "items": ["veggiesdelight:turnip_water"] }]
+        "items": [
+          {
+            "items": [
+              "veggiesdelight:turnip_water"
+            ]
+          }
+        ]
       }
     }
   },
   "requirements": [
-    ["A"], ["B"], ["C"], ["D"], ["E"]
+    [
+      "A"
+    ],
+    [
+      "B"
+    ],
+    [
+      "C"
+    ],
+    [
+      "D"
+    ],
+    [
+      "E"
+    ]
   ],
   "rewards": {
     "experience": 300

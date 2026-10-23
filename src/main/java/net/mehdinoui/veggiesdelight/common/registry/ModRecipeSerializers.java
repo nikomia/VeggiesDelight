@@ -4,7 +4,6 @@ import net.mehdinoui.veggiesdelight.VeggiesDelight;
 import net.mehdinoui.veggiesdelight.common.crafting.SweetPotatoDoughRecipe;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.item.crafting.RecipeSerializer;
-import net.minecraft.world.item.crafting.SimpleCraftingRecipeSerializer;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
@@ -18,7 +17,6 @@ public class ModRecipeSerializers {
     }
 
     // Sweet Potato Dough
-    public static final Supplier<SimpleCraftingRecipeSerializer<?>> SWEET_POTATO_DOUGH =
-            SERIALIZERS.register("crafting_special_sweet_potato_dough",
-                    () -> new SimpleCraftingRecipeSerializer<>(SweetPotatoDoughRecipe::new));
+    public static final Supplier<RecipeSerializer<SweetPotatoDoughRecipe>> SWEET_POTATO_DOUGH =
+            SERIALIZERS.register("crafting_special_sweet_potato_dough", () -> SweetPotatoDoughRecipe.SERIALIZER);
 }

@@ -8,24 +8,13 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "tag": "c:crops/cabbage"
-    },
-    {
-      "tag": "c:foods/bread"
-    },
-    {
-      "tag": "culturaldelights:avocados"
-    },
-    {
-      "item": "minecraft:bowl"
-    },
-    {
-      "tag": "c:crops/tomato"
-    }
+    "#c:crops/cabbage",
+    "#c:foods/bread",
+    "#culturaldelights:avocados",
+    "minecraft:bowl",
+    "#c:crops/tomato"
   ],
   "result": {
-    "count": 1,
     "id": "veggiesdelight:cesar_salad"
   }
 }

@@ -19,36 +19,80 @@
     "A": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
-        "items": [{ "items": ["veggiesdelight:sweet_potato_pie"] }]
+        "items": [
+          {
+            "items": [
+              "veggiesdelight:sweet_potato_pie"
+            ]
+          }
+        ]
       }
     },
     "B": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
-        "items": [{ "items": ["veggiesdelight:potato_noodles"] }]
+        "items": [
+          {
+            "items": [
+              "veggiesdelight:potato_noodles"
+            ]
+          }
+        ]
       }
     },
     "C": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
-        "items": [{ "items": ["veggiesdelight:mashed_potatoes"] }]
+        "items": [
+          {
+            "items": [
+              "veggiesdelight:mashed_potatoes"
+            ]
+          }
+        ]
       }
     },
     "D": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
-        "items": [{ "items": ["veggiesdelight:sweet_potato_cupcake"] }]
+        "items": [
+          {
+            "items": [
+              "veggiesdelight:sweet_potato_cupcake"
+            ]
+          }
+        ]
       }
     },
     "E": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
-        "items": [{ "items": ["veggiesdelight:sweet_potato_pancakes"] }]
+        "items": [
+          {
+            "items": [
+              "veggiesdelight:sweet_potato_pancakes"
+            ]
+          }
+        ]
       }
     }
   },
   "requirements": [
-    ["A"], ["B"], ["C"], ["D"], ["E"]
+    [
+      "A"
+    ],
+    [
+      "B"
+    ],
+    [
+      "C"
+    ],
+    [
+      "D"
+    ],
+    [
+      "E"
+    ]
   ],
   "rewards": {
     "experience": 300

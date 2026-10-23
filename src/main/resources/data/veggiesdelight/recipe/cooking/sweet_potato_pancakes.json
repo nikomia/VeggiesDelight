@@ -1,0 +1,15 @@
+{
+  "type": "farmersdelight:cooking",
+  "container": {
+    "id": "minecraft:bowl"
+  },
+  "experience": 1.0,
+  "ingredients": [
+    "veggiesdelight:sweet_potato_dough",
+    "minecraft:honey_bottle",
+    "#c:drinks/milk"
+  ],
+  "result": {
+    "id": "veggiesdelight:sweet_potato_pancakes"
+  }
+}

@@ -7,24 +7,16 @@
   ],
   "type": "farmersdelight:cooking",
   "container": {
-    "count": 1,
     "id": "minecraft:bowl"
   },
   "experience": 1.0,
   "ingredients": [
-    {
-      "tag": "c:foods/safe_raw_fish"
-    },
-    {
-      "item": "moredelight:diced_potatoes"
-    },
-    {
-      "tag": "c:eggs"
-    }
+    "#c:foods/safe_raw_fish",
+    "moredelight:diced_potatoes",
+    "#c:eggs"
   ],
   "recipe_book_tab": "meals",
   "result": {
-    "count": 1,
     "id": "veggiesdelight:fish_and_chips"
   }
 }

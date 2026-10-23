@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#c:crops/zucchini",
+    "#c:crops/potato",
+    "#c:crops/carrot",
+    "#c:crops/cabbage",
+    "minecraft:bowl"
+  ],
+  "result": {
+    "id": "veggiesdelight:coleslaw"
+  }
+}

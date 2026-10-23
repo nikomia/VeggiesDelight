@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "veggiesdelight:sweet_potato_crate"
+  ],
+  "result": {
+    "count": 9,
+    "id": "veggiesdelight:sweet_potato"
+  }
+}

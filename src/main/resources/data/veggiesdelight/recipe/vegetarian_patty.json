@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "neoforge:ingredient_type": "neoforge:compound",
+      "children": [
+        "#c:crops/cauliflower",
+        "#c:crops/potato",
+        "#c:crops/zucchini"
+      ]
+    },
+    "#c:crops/onion",
+    "#c:crops/grain"
+  ],
+  "result": {
+    "id": "veggiesdelight:raw_vegetarian_patty"
+  }
+}

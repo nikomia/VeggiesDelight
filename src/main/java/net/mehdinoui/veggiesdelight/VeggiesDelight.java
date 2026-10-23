@@ -21,7 +21,8 @@ public class VeggiesDelight
         ModBlocks.register(modEventBus);
         ModPlacementModifiers.register(modEventBus);
         ModRecipeSerializers.register(modEventBus);
-        modContainer.registerConfig(ModConfig.Type.COMMON, Configuration.CONFIG);
+        ModConditions.register(modEventBus);
+        modContainer.registerConfig(ModConfig.Type.LOCAL, Configuration.CONFIG);
 
         EVENT_BUS.addListener(VillageStructures::addNewVillageBuilding);
     }

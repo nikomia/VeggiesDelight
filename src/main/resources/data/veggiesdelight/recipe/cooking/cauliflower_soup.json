@@ -1,0 +1,16 @@
+{
+  "type": "farmersdelight:cooking",
+  "container": {
+    "id": "minecraft:bowl"
+  },
+  "experience": 1.0,
+  "ingredients": [
+    "#c:crops/cauliflower",
+    "#c:crops/cauliflower",
+    "#c:drinks/milk"
+  ],
+  "recipe_book_tab": "meals",
+  "result": {
+    "id": "veggiesdelight:cauliflower_soup"
+  }
+}

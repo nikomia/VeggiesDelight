@@ -1,0 +1,15 @@
+{
+  "type": "farmersdelight:cutting",
+  "ingredients": [
+    "veggiesdelight:sweet_potato_pie"
+  ],
+  "result": [
+    {
+      "item": {
+        "count": 4,
+        "id": "veggiesdelight:sweet_potato_pie_slice"
+      }
+    }
+  ],
+  "tool": "#c:tools/knife"
+}

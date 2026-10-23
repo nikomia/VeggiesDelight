@@ -1,0 +1,23 @@
+{
+  "feature": "veggiesdelight:patch_wild_garlic",
+  "placement": [
+    {
+      "type": "veggiesdelight:configurable_rarity_filter",
+      "config_key": "garlic"
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:count",
+      "count": 64
+    },
+    {
+      "type": "minecraft:heightmap",
+      "heightmap": "MOTION_BLOCKING"
+    },
+    {
+      "type": "minecraft:biome"
+    }
+  ]
+}

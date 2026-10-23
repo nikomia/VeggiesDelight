@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#c:foods/bread",
+    "#c:crops/zucchini",
+    "#c:foods/leafy_green",
+    "#c:crops/tomato"
+  ],
+  "result": {
+    "id": "veggiesdelight:zucchini_sandwich"
+  }
+}

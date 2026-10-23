@@ -9,72 +9,62 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "functions": [
-            {
-              "function": "minecraft:set_count",
-              "count": {
-                "min": 1.0,
-                "max": 3.0,
-                "type": "minecraft:uniform"
-              }
+          "modifier": {
+            "type": "minecraft:set_count",
+            "count": {
+              "min": 1.0,
+              "max": 3.0,
+              "type": "minecraft:uniform"
             }
-          ],
+          },
           "name": "veggiesdelight:cauliflower"
         },
         {
           "type": "minecraft:item",
-          "functions": [
-            {
-              "function": "minecraft:set_count",
-              "count": {
-                "min": 1.0,
-                "max": 3.0,
-                "type": "minecraft:uniform"
-              }
+          "modifier": {
+            "type": "minecraft:set_count",
+            "count": {
+              "min": 1.0,
+              "max": 3.0,
+              "type": "minecraft:uniform"
             }
-          ],
+          },
           "name": "veggiesdelight:cauliflower_seeds"
         },
         {
           "type": "minecraft:item",
-          "functions": [
-            {
-              "function": "minecraft:set_count",
-              "count": {
-                "min": 1.0,
-                "max": 3.0,
-                "type": "minecraft:uniform"
-              }
+          "modifier": {
+            "type": "minecraft:set_count",
+            "count": {
+              "min": 1.0,
+              "max": 3.0,
+              "type": "minecraft:uniform"
             }
-          ],
+          },
           "name": "veggiesdelight:garlic"
         },
         {
           "type": "minecraft:item",
-          "functions": [
-            {
-              "function": "minecraft:set_count",
-              "count": {
-                "min": 1.0,
-                "max": 3.0,
-                "type": "minecraft:uniform"
-              }
+          "modifier": {
+            "type": "minecraft:set_count",
+            "count": {
+              "min": 1.0,
+              "max": 3.0,
+              "type": "minecraft:uniform"
             }
-          ],
+          },
           "name": "veggiesdelight:sweet_potato"
         },
         {
           "type": "minecraft:item",
-          "functions": [
-            {
-              "function": "minecraft:set_count",
-              "count": {
-                "min": 1.0,
-                "max": 3.0,
-                "type": "minecraft:uniform"
-              }
+          "modifier": {
+            "type": "minecraft:set_count",
+            "count": {
+              "min": 1.0,
+              "max": 3.0,
+              "type": "minecraft:uniform"
             }
-          ],
+          },
           "name": "veggiesdelight:turnip"
         }
       ]

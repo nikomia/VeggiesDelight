@@ -31,7 +31,7 @@ public class BellpepperCropBlock extends CropBlock {
     }
 
     @Override
-    public IntegerProperty getAgeProperty() {
+    protected IntegerProperty getAgeProperty() {
         return AGE;
     }
 
@@ -45,15 +45,16 @@ public class BellpepperCropBlock extends CropBlock {
         pBuilder.add(AGE);
     }
 
-    public InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos,
+    @Override
+    protected InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos,
                                             Player player, BlockHitResult hit) {
         int currentAge = state.getValue(AGE);
         if (currentAge == MAX_AGE) {
-            int quantity = 1 + level.random.nextInt(2);
+            int quantity = 1 + level.getRandom().nextInt(2);
             popResource(level, pos, new ItemStack(ModItems.BELLPEPPER.get(), quantity));
-            level.playSound(null, pos, SoundEvents.SWEET_BERRY_BUSH_PICK_BERRIES, SoundSource.BLOCKS, 1.0F, 0.8F + level.random.nextFloat() * 0.4F);
+            level.playSound(null, pos, SoundEvents.SWEET_BERRY_BUSH_PICK_BERRIES, SoundSource.BLOCKS, 1.0F, 0.8F + level.getRandom().nextFloat() * 0.4F);
             level.setBlock(pos, state.setValue(AGE, MAX_AGE - 3), 2);
-            return InteractionResult.sidedSuccess(level.isClientSide);
+            return InteractionResult.SUCCESS;
         } else {
             return super.useWithoutItem(state, level, pos, player, hit);
         }

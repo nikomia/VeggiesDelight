@@ -1,0 +1,17 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "veggiesdelight:trades_enabled"
+    }
+  ],
+  "gives": {
+    "id": "minecraft:emerald"
+  },
+  "max_uses": 16,
+  "reputation_discount": 0.05,
+  "wants": {
+    "count": 16,
+    "id": "veggiesdelight:zucchini"
+  },
+  "xp": 5
+}

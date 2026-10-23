@@ -1,0 +1,22 @@
+{
+  "type": "farmersdelight:cooking",
+  "container": {
+    "id": "minecraft:bowl"
+  },
+  "experience": 1.0,
+  "ingredients": [
+    "veggiesdelight:potato_noodle",
+    "veggiesdelight:potato_noodle",
+    {
+      "neoforge:ingredient_type": "neoforge:compound",
+      "children": [
+        "#c:crops/garlic",
+        "#c:crops/onion"
+      ]
+    }
+  ],
+  "recipe_book_tab": "meals",
+  "result": {
+    "id": "veggiesdelight:potato_noodles"
+  }
+}

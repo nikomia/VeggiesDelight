@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#c:crops/cauliflower",
+    "#c:crops/cauliflower",
+    "minecraft:wheat"
+  ],
+  "result": {
+    "id": "veggiesdelight:cauliflower_bread"
+  }
+}

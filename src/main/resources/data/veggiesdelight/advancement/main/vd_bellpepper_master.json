@@ -19,42 +19,95 @@
     "A": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
-        "items": [{ "items": ["veggiesdelight:cacciatore"] }]
+        "items": [
+          {
+            "items": [
+              "veggiesdelight:cacciatore"
+            ]
+          }
+        ]
       }
     },
     "B": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
-        "items": [{ "items": ["veggiesdelight:chicken_fajitas_wrap"] }]
+        "items": [
+          {
+            "items": [
+              "veggiesdelight:chicken_fajitas_wrap"
+            ]
+          }
+        ]
       }
     },
     "C": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
-        "items": [{ "items": ["veggiesdelight:mhadjeb"] }]
+        "items": [
+          {
+            "items": [
+              "veggiesdelight:mhadjeb"
+            ]
+          }
+        ]
       }
     },
     "D": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
-        "items": [{ "items": ["veggiesdelight:shakshouka"] }]
+        "items": [
+          {
+            "items": [
+              "veggiesdelight:shakshouka"
+            ]
+          }
+        ]
       }
     },
     "E": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
-        "items": [{ "items": ["veggiesdelight:stuffed_bellpeppers_block"] }]
+        "items": [
+          {
+            "items": [
+              "veggiesdelight:stuffed_bellpeppers_block"
+            ]
+          }
+        ]
       }
     },
     "F": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
-        "items": [{ "items": ["veggiesdelight:vegan_pizza"] }]
+        "items": [
+          {
+            "items": [
+              "veggiesdelight:vegan_pizza"
+            ]
+          }
+        ]
       }
     }
   },
   "requirements": [
-    ["A"],["B"],["C"],["D"],["E"],["F"]
+    [
+      "A"
+    ],
+    [
+      "B"
+    ],
+    [
+      "C"
+    ],
+    [
+      "D"
+    ],
+    [
+      "E"
+    ],
+    [
+      "F"
+    ]
   ],
   "rewards": {
     "experience": 300

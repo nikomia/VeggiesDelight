@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#c:crops/beetroot",
+    "#c:crops/beetroot",
+    "#c:crops/beetroot",
+    "minecraft:cocoa_beans",
+    "minecraft:sugar",
+    "minecraft:cocoa_beans",
+    "#c:eggs",
+    "minecraft:sugar",
+    "#c:eggs"
+  ],
+  "result": {
+    "id": "veggiesdelight:beetroot_brownie_tray"
+  }
+}

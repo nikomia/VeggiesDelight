@@ -7,27 +7,17 @@
   ],
   "type": "farmersdelight:cooking",
   "container": {
-    "count": 1,
     "id": "minecraft:bowl"
   },
   "experience": 1.0,
   "ingredients": [
-    {
-      "tag": "c:crops/bellpepper"
-    },
-    {
-      "tag": "culturaldelights:avocados"
-    },
-    {
-      "tag": "c:crops/tomato"
-    },
-    {
-      "tag": "c:eggs"
-    }
+    "#c:crops/bellpepper",
+    "#culturaldelights:avocados",
+    "#c:crops/tomato",
+    "#c:eggs"
   ],
   "recipe_book_tab": "meals",
   "result": {
-    "count": 1,
     "id": "veggiesdelight:shakshouka"
   }
 }

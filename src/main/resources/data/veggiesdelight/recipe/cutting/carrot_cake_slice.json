@@ -1,0 +1,15 @@
+{
+  "type": "farmersdelight:cutting",
+  "ingredients": [
+    "veggiesdelight:carrot_cake"
+  ],
+  "result": [
+    {
+      "item": {
+        "count": 7,
+        "id": "veggiesdelight:carrot_cake_slice"
+      }
+    }
+  ],
+  "tool": "#c:tools/knife"
+}

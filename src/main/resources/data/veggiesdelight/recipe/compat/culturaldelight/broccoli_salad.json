@@ -8,21 +8,12 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "tag": "c:crops/broccoli"
-    },
-    {
-      "tag": "c:crops/tomato"
-    },
-    {
-      "tag": "culturaldelights:avocados"
-    },
-    {
-      "item": "minecraft:bowl"
-    }
+    "#c:crops/broccoli",
+    "#c:crops/tomato",
+    "#culturaldelights:avocados",
+    "minecraft:bowl"
   ],
   "result": {
-    "count": 1,
     "id": "veggiesdelight:broccoli_salad"
   }
 }

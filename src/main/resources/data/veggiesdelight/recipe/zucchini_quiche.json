@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "O": "farmersdelight:pie_crust",
+    "a": "#c:drinks/milk",
+    "m": {
+      "neoforge:ingredient_type": "neoforge:compound",
+      "children": [
+        "#c:foods/cooked_mutton",
+        "#c:foods/cooked_chicken",
+        "#c:foods/cooked_beef",
+        "#c:foods/cooked_pork",
+        "#c:foods/cooked_bacon"
+      ]
+    },
+    "z": "veggiesdelight:roasted_zucchini"
+  },
+  "pattern": [
+    "zzz",
+    "aOm"
+  ],
+  "result": {
+    "id": "veggiesdelight:zucchini_quiche"
+  }
+}

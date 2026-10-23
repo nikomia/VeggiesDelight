@@ -8,21 +8,12 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "tag": "c:foods/bread"
-    },
-    {
-      "item": "veggiesdelight:cooked_vegetarian_patty"
-    },
-    {
-      "tag": "c:foods/cooked_egg"
-    },
-    {
-      "tag": "c:foods/leafy_green"
-    }
+    "#c:foods/bread",
+    "veggiesdelight:cooked_vegetarian_patty",
+    "#c:foods/cooked_egg",
+    "#c:foods/leafy_green"
   ],
   "result": {
-    "count": 1,
     "id": "moredelight:hamburger_with_egg"
   }
 }

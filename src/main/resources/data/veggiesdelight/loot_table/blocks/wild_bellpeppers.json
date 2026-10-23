@@ -2,67 +2,28 @@
   "type": "minecraft:block",
   "pools": [
     {
-      "name": "pool1",
       "rolls": 1,
       "entries": [
         {
           "type": "minecraft:item",
-          "conditions": [
-            {
-              "condition": "minecraft:random_chance",
-              "chance": 0.2
-            },
-            {
-              "condition": "minecraft:inverted",
-              "term": {
-                "condition": "minecraft:any_of",
-                "terms": [
-                  {
-                    "ability": "shears_dig",
-                    "condition": "neoforge:can_item_perform_ability"
-                  },
-                  {
-                    "condition": "minecraft:match_tool",
-                    "predicate": {
-                      "predicates": {
-                        "minecraft:enchantments": [
-                          {
-                            "enchantments": "minecraft:silk_touch",
-                            "levels": {
-                              "min": 1
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  }
-                ]
-              }
-            }
-          ],
-          "name": "veggiesdelight:bellpepper"
-        }
-      ]
-    },
-    {
-      "name": "pool2",
-      "rolls": 1,
-      "entries": [
-        {
-          "type": "minecraft:alternatives",
-          "children": [
-            {
-              "type": "minecraft:item",
-              "conditions": [
-                {
-                  "condition": "minecraft:any_of",
+          "condition": {
+            "type": "minecraft:all_of",
+            "terms": [
+              {
+                "type": "minecraft:random_chance",
+                "chance": 0.2
+              },
+              {
+                "type": "minecraft:inverted",
+                "term": {
+                  "type": "minecraft:any_of",
                   "terms": [
                     {
-                      "ability": "shears_dig",
-                      "condition": "neoforge:can_item_perform_ability"
+                      "type": "neoforge:can_item_perform_ability",
+                      "ability": "shears_dig"
                     },
                     {
-                      "condition": "minecraft:match_tool",
+                      "type": "minecraft:match_tool",
                       "predicate": {
                         "predicates": {
                           "minecraft:enchantments": [
@@ -78,14 +39,52 @@
                     }
                   ]
                 }
-              ],
+              }
+            ]
+          },
+          "name": "veggiesdelight:bellpepper"
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:alternatives",
+          "children": [
+            {
+              "type": "minecraft:item",
+              "condition": {
+                "type": "minecraft:any_of",
+                "terms": [
+                  {
+                    "type": "neoforge:can_item_perform_ability",
+                    "ability": "shears_dig"
+                  },
+                  {
+                    "type": "minecraft:match_tool",
+                    "predicate": {
+                      "predicates": {
+                        "minecraft:enchantments": [
+                          {
+                            "enchantments": "minecraft:silk_touch",
+                            "levels": {
+                              "min": 1
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ]
+              },
               "name": "veggiesdelight:wild_bellpeppers"
             },
             {
               "type": "minecraft:item",
-              "functions": [
+              "modifier": [
                 {
-                  "function": "minecraft:apply_bonus",
+                  "type": "minecraft:apply_bonus",
                   "enchantment": "minecraft:fortune",
                   "formula": "minecraft:uniform_bonus_count",
                   "parameters": {
@@ -93,7 +92,7 @@
                   }
                 },
                 {
-                  "function": "minecraft:explosion_decay"
+                  "type": "minecraft:explosion_decay"
                 }
               ],
               "name": "veggiesdelight:bellpepper_seeds"

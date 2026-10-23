@@ -2,7 +2,6 @@
   "type": "minecraft:block",
   "pools": [
     {
-      "name": "pool1",
       "rolls": 1.0,
       "entries": [
         {
@@ -10,15 +9,13 @@
           "children": [
             {
               "type": "minecraft:item",
-              "conditions": [
-                {
-                  "condition": "minecraft:block_state_property",
-                  "block": "veggiesdelight:broccoli_crop",
-                  "properties": {
-                    "age": "5"
-                  }
+              "condition": {
+                "type": "minecraft:match_block",
+                "blocks": "veggiesdelight:broccoli_crop",
+                "state": {
+                  "age": "5"
                 }
-              ],
+              },
               "name": "veggiesdelight:broccoli"
             },
             {
@@ -30,39 +27,32 @@
       ]
     },
     {
-      "name": "pool2",
       "rolls": 1.0,
       "entries": [
         {
           "type": "minecraft:item",
-          "functions": [
-            {
-              "function": "minecraft:apply_bonus",
-              "enchantment": "minecraft:fortune",
-              "formula": "minecraft:binomial_with_bonus_count",
-              "parameters": {
-                "extra": 3,
-                "probability": 0.5714286
-              }
+          "modifier": {
+            "type": "minecraft:apply_bonus",
+            "enchantment": "minecraft:fortune",
+            "formula": "minecraft:binomial_with_bonus_count",
+            "parameters": {
+              "extra": 3,
+              "probability": 0.5714286
             }
-          ],
+          },
           "name": "veggiesdelight:broccoli_seeds"
         }
       ],
-      "conditions": [
-        {
-          "condition": "minecraft:block_state_property",
-          "block": "veggiesdelight:broccoli_crop",
-          "properties": {
-            "age": "5"
-          }
+      "condition": {
+        "type": "minecraft:match_block",
+        "blocks": "veggiesdelight:broccoli_crop",
+        "state": {
+          "age": "5"
         }
-      ]
+      }
     }
   ],
-  "functions": [
-    {
-      "function": "minecraft:explosion_decay"
-    }
-  ]
+  "modifier": {
+    "type": "minecraft:explosion_decay"
+  }
 }

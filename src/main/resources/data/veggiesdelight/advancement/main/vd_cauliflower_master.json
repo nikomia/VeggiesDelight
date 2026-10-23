@@ -19,30 +19,65 @@
     "A": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
-        "items": [{ "items": ["veggiesdelight:cauliflower_bread"] }]
+        "items": [
+          {
+            "items": [
+              "veggiesdelight:cauliflower_bread"
+            ]
+          }
+        ]
       }
     },
     "B": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
-        "items": [{ "items": ["veggiesdelight:cauliflower_soup"] }]
+        "items": [
+          {
+            "items": [
+              "veggiesdelight:cauliflower_soup"
+            ]
+          }
+        ]
       }
     },
     "C": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
-        "items": [{ "items": ["veggiesdelight:cauliflower_kuku"] }]
+        "items": [
+          {
+            "items": [
+              "veggiesdelight:cauliflower_kuku"
+            ]
+          }
+        ]
       }
     },
     "D": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
-        "items": [{ "items": ["veggiesdelight:garlic_rice_with_cauliflower"] }]
+        "items": [
+          {
+            "items": [
+              "veggiesdelight:garlic_rice_with_cauliflower"
+            ]
+          }
+        ]
       }
     }
   },
   "requirements": [
-    ["A"], ["B"], ["C"], ["D"]
+    [
+      "A"
+    ],
+    [
+      "B"
+    ],
+    [
+      "C"
+    ],
+    [
+      "D"
+    ]
   ],
   "rewards": {
     "experience": 300
