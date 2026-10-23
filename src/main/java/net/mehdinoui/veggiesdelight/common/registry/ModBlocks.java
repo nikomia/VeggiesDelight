@@ -9,6 +9,7 @@ import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.material.MapColor;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredRegister;
@@ -26,7 +27,8 @@ public class ModBlocks {
     }
 
     private static BlockBehaviour.Properties crop() {
-        return BlockBehaviour.Properties.ofFullCopy(Blocks.WHEAT).noOcclusion().noCollision();
+        // Wheat's map color reads CropBlock.AGE (0..7); crops with other age ranges would crash on it.
+        return BlockBehaviour.Properties.ofFullCopy(Blocks.WHEAT).mapColor(MapColor.PLANT).noOcclusion().noCollision();
     }
 
     private static BlockBehaviour.Properties wildCrop() {

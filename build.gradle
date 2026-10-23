@@ -11,6 +11,23 @@ base {
 neoForge {
 	version = project.neoforge_version
 	accessTransformers.from(file('src/main/resources/META-INF/accesstransformer.cfg'))
+
+	runs {
+		server {
+			server()
+			programArgument '--nogui'
+		}
+	}
+
+	mods {
+		veggiesdelight {
+			sourceSet(sourceSets.main)
+		}
+	}
+}
+
+configurations {
+	runtimeClasspath.extendsFrom localRuntime
 }
 
 dependencies {

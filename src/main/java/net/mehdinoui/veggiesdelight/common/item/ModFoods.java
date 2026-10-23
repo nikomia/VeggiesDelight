@@ -1,5 +1,8 @@
 package net.mehdinoui.veggiesdelight.common.item;
 
+import net.neoforged.neoforge.registries.DeferredHolder;
+import net.minecraft.resources.Identifier;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.core.Holder;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectInstance;
@@ -9,7 +12,6 @@ import net.minecraft.world.item.component.Consumable;
 import net.minecraft.world.item.component.Consumables;
 import net.minecraft.world.item.consume_effects.ApplyStatusEffectsConsumeEffect;
 import org.jspecify.annotations.Nullable;
-import vectorwing.farmersdelight.common.registry.ModEffects;
 
 import static vectorwing.farmersdelight.common.FoodValues.*;
 
@@ -18,6 +20,9 @@ import static vectorwing.farmersdelight.common.FoodValues.*;
  * {@code food} is null for drinks without nutrition.
  */
 public record ModFoods(@Nullable FoodProperties food, Consumable consumable) {
+    // FD регистрирует эффекты на своём RegisterEvent: класс ModEffects при создании мода трогать нельзя — берём по ключу.
+    private static final Holder<MobEffect> NOURISHMENT = DeferredHolder.create(Registries.MOB_EFFECT, Identifier.fromNamespaceAndPath("farmersdelight", "nourishment"));
+
 
     // RAW CROPS
     public static final ModFoods DANDELION_LEAF = food(1, 0.1F).effect(MobEffects.REGENERATION, 100).fast().build();
@@ -137,7 +142,7 @@ public record ModFoods(@Nullable FoodProperties food, Consumable consumable) {
         }
 
         Builder nourishment(int duration) {
-            return effect(ModEffects.NOURISHMENT, duration);
+            return effect(NOURISHMENT, duration);
         }
 
         Builder fast() {
